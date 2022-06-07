@@ -1,0 +1,27 @@
+{
+  "name": "full-stack-react-app-tutorial",
+  "version": "1.0.0",
+  "description": "Full stack React app tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliAsjad512/full-stack-react-app-tutorial.git"
+  },
+  "author": "Ali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliAsjad512/full-stack-react-app-tutorial/issues"
+  },
+  "homepage": "https://github.com/AliAsjad512/full-stack-react-app-tutorial#readme",
+  "devDependencies": {
+    "concurrently": "^7.2.1",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "pg": "^8.7.3"
+  }
+}

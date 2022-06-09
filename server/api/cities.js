@@ -1,9 +1,10 @@
  var express = require('express');
  var Cities = require('../models/cities');
+ //const fetch = require('node-fetch');
 
  var router = express.Router();
 
- router.get('/', (req, res) => {
+ router.get('/ : city', (req, res) => {
    Cities.retrieveAll(function(err, cities)  {
      if (err)
        return res.json(err);

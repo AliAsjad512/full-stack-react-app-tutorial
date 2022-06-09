@@ -5,6 +5,7 @@
 
  router.get('/:city', function(req, res)  {
    var city = req.params.city;
+   console.log(city);
 
    Weather.retrieveByCity(city, function(err, weather)  {
      if (err) 

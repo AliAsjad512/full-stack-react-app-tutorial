@@ -15,7 +15,10 @@ const express = require('express');//we se thise for backened to set up server
   app.use(express.urlencoded({extended: false}));
 
   app.use(bodyParser.json());
+app.get('/',function(req,res){
+    res.send("Hello world");
 
+})
 
    app.use('/api/cities', require('./api/cities'));
    app.use('/api/weather', require('./api/weather'));

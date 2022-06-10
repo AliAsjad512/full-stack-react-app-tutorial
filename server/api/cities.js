@@ -1,5 +1,6 @@
  var express = require('express');
  var Cities = require('../models/cities');
+ var Weather = require('../models/weather');
  //const fetch = require('node-fetch');
 
  var router = express.Router();
@@ -11,6 +12,37 @@
      return res.json(cities);
    });
  });
+
+ router.get('/:city', function(req, res)  {
+
+  var city = req.params.city;
+   
+  console.log(city);
+ // router.route('/:city').get(function (req, res) {
+   //var city = req.params.city;
+   //city.find({}, function (err, result) {
+      // res.status(200).send({ result });
+   //})
+//});
+
+
+
+
+//   Cities.retrieveByCity(city, function(err, weather)  {
+//     if (err) 
+//      return res.json(err);
+//    return res.json(weather);
+//   });
+  
+// });
+Weather.retrieveByCity(city, function(err, weather)  {
+  if (err) 
+   return res.json(err);
+ return res.json(weather);
+});
+//var city = req.params.city;
+});
+
 
  router.post('/', (req, res) => {
    var city = req.body.city;

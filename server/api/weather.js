@@ -25,7 +25,7 @@
       return res.json(err);
     return res.json(weather);
    });
-   var city = req.params.city;
+   //var city = req.params.city;
  });
 
  module.exports = router;

@@ -2,7 +2,7 @@
   const Cities = require('./cities');
 //var request =require('request');
 
-var axios = require('axios');
+//var axios = require('axios');
   const API_KEY = `d65049b43ed32925bafb9a742e805cfc`;
  require('dotenv').config();
 
@@ -11,7 +11,7 @@ var axios = require('axios');
   class Weather  extends Cities {
     static retrieveByCity (city, callback) {
       request({
-        uri:   `http://api.openweathermap.org/data/2.5/weather?q=Paris&APPID=d65049b43ed32925bafb9a742e805cfc`,
+        uri:   `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=d65049b43ed32925bafb9a742e805cfc`,
         data: { id: city },
        json: true,
        
